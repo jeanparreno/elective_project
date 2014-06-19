@@ -7,14 +7,21 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 	<link rel="javascript" type="text/javascript" href="js/bootstrap.js">
 	<link rel="javascript" type="text/javascript" href="js/bootstrap.min.js">
+	<link rel="javascript" type="text/javascript" href="js/combodate.js">
+	<link rel="javascript" type="text/javascript" href="js/moment.min.js">
+	<link rel="javascript" type="text/javascript" href="js/jquery-2.1.1.js">
 	<link rel="stylesheet" type="text/css" href="fonts/glyphicons-halflings-regular.ttf">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
 </head>
 <body>
 <div id="container">
 	<form method="get" action="" name="login">
 		<h1>Sign-Up</h1>
-		<div class="input-group input-group-sm textfield">
+		<table>	
+		<tr>
+		<td><div class="input-group input-group-sm textfield">
 			<input type="text" class="form-control" placeholder="First Name">
 		 <br>
 			<input type="text" class="form-control" placeholder="Middle Name">
@@ -27,22 +34,36 @@
 		  <br>
 		  	<input type="text" class="form-control" placeholder="E-Mail">
 		 <br>
-		 </div>
-		 <div class="dropdown">
-			  <button class="btn dropdown-toggle sr-only" type="button" id="dropdownMenu1" data-toggle="dropdown">
-			    Birthday
-			    <span class="caret"></span>
-			  </button>
-			  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-			    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-			    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-			    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-			  </ul>
-		</div>
+		 
+		 	<input type="text" id="dob" data-format="DD-MM-YYYY" data-template="D MMM YYYY" name="dob" value="09-01-2013">
+
+			<script>
+			$(function(){
+			    $('#dob').combodate({
+			    	 minYear: 1940,
+    				maxYear: 2014,
+			    });    
+			});
+			</script>
+		
 		<br>
 			 <button type="button" class="btn btn-default btn-lg">Sign-up</button>
 			 <button type="button" class="btn btn-default btn-lg">Cancel</button>
-		
+		</div>
+		</td>
+		<td>
+		<div class="description">
+			<img src="logo.jpg" width="300">
+			<br>
+			<h4>Join the Community.<br>
+			Interact with fellow pluggers.<br>
+			Be part of the new Facebook<br>
+			Char.<br></h4>
+		</div>
+		</td>
+		</tr>
+		</table>
+
 </div>
 
 </form>
