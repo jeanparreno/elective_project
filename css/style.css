@@ -1,0 +1,26 @@
+body{
+	background: #0b8db3;
+}
+
+#container{
+	background: white;
+	width: 700px;
+	height: 500px;
+	padding: 30px;
+	margin: 0px auto;
+	margin-top: 50px;
+}
+
+.textfield{
+	width: 300px!important;
+	margin-top: 2px;
+}
+
+.textfield input{
+	margin-top: 10px;
+}
+
+.textfield button{
+	margin-top: 10px;
+	margin-right: 10px;
+}
