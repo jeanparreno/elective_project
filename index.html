@@ -5,67 +5,62 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/datepicker.css">
 	<link rel="javascript" type="text/javascript" href="js/bootstrap.js">
 	<link rel="javascript" type="text/javascript" href="js/bootstrap.min.js">
 	<link rel="javascript" type="text/javascript" href="js/combodate.js">
 	<link rel="javascript" type="text/javascript" href="js/moment.min.js">
 	<link rel="javascript" type="text/javascript" href="js/jquery-2.1.1.js">
+	<link rel="javascript" type="text/javascript" href="js/bootstrap-datepicker.js">
 	<link rel="stylesheet" type="text/css" href="fonts/glyphicons-halflings-regular.ttf">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
+	<script src="js/modernizr.custom.js"></script>
 
 </head>
 <body>
 <div id="container">
-	<form method="get" action="" name="login">
-		<h1>Sign-Up</h1>
-		<table>	
-		<tr>
-		<td><div class="input-group input-group-sm textfield">
-			<input type="text" class="form-control" placeholder="First Name">
-		 <br>
-			<input type="text" class="form-control" placeholder="Middle Name">
-		 <br>
-		 	<input type="text" class="form-control" placeholder="Last Name">
-		 <br>
-		  	<input type="text" class="form-control" placeholder="Username">
-		 <br>
-		  	<input type="password" class="form-control" placeholder="Password">
-		  <br>
-		  	<input type="text" class="form-control" placeholder="E-Mail">
-		 <br>
-		 
-		 	<input type="text" id="dob" data-format="DD-MM-YYYY" data-template="D MMM YYYY" name="dob" value="09-01-2013">
-
-			<script>
-			$(function(){
-			    $('#dob').combodate({
-			    	 minYear: 1940,
-    				maxYear: 2014,
-			    });    
-			});
-			</script>
-		
-		<br>
-			 <button type="button" class="btn btn-default btn-lg">Sign-up</button>
-			 <button type="button" class="btn btn-default btn-lg">Cancel</button>
-		</div>
-		</td>
-		<td>
-		<div class="description">
-			<img src="logo.jpg" width="300">
-			<br>
-			<h4>Join the Community.<br>
-			Interact with fellow pluggers.<br>
-			Be part of the new Facebook<br>
-			Char.<br></h4>
-		</div>
-		</td>
-		</tr>
-		</table>
-
+	<div id="pt-main" class="pt-perspective">
+		<div id="pt-page pt-page-1">
+			<form method="get" action="" name="login">
+				<h1>Sign-Up</h1>
+				<table>	
+				<tr>
+				<td><div class="input-group input-group-sm textfield">
+					<input type="text" class="form-control" placeholder="First Name">
+				 <br>
+					<input type="text" class="form-control" placeholder="Middle Name">
+				 <br>
+				 	<input type="text" class="form-control" placeholder="Last Name">
+				 <br>
+				  	<input type="text" class="form-control" placeholder="Username">
+				 <br>
+				  	<input type="password" class="form-control" placeholder="Password">
+				  <br>
+				  	<input type="text" class="form-control" placeholder="E-Mail">
+				 <br>
+				 	<input type="text" class="form-control datepicker" placeholder="Birthday">
+				 	
+				<br>
+					 <button type="button" class="btn btn-default btn-lg">Sign-up</button>
+					 <button type="button" class="btn btn-default btn-lg"><a href="login.html">Login</a></button>
+				</div>
+				</td>
+				<td>
+				<div class="description">
+					<img src="logo.jpg" width="300">
+					<br>
+					<h4>Join the Community.<br>
+					Interact with fellow pluggers.<br>
+					Be part of the new Facebook<br>
+					Char.<br></h4>
+				</div>
+				</td>
+				</tr>
+				</table>
+			</form>
+	</div>
 </div>
-
-</form>
+<script type="text/javascript" src="js/bootstrap-datepicker.js">$('.datepicker').datepicker();
+					</script>
 </body>
 </html>
