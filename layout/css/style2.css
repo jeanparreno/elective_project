@@ -527,4 +527,33 @@ body {
         z-index: 3;   
     }
 
+    .nav-row
+    {
+      top: 50;
+      -moz-transition: position 0.3s, height 0.3s, width 0.3s, margin 0.3s, background 0.3s;
+
+    }
+    .col-md-2.shrink
+    {
+      background: #4891A2;
+      z-index: 500;
+    }
+    .top
+    {
+      -moz-transition: height 0.3s;
+    }
+    .top.shrink
+    {
+      height: 150px;
+      box-shadow: 0px 2px 3px black;
+    }
+    .nav-row.shrink
+    {
+      position: fixed;
+      height: 50px;
+      margin-top: 10px;
+      margin-left: 45px;
+      width: 960px;
+      z-index: 500;
+    }
 

@@ -7,7 +7,28 @@
   <script type="text/javascript" src="js/timeline.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
 </head>
+<script type="text/javascript">
+        $(function(){
+           var shrinkHeader = 325;
+           $(window).scroll(function(){
+              var scroll = getCurrentScroll();
+              if(scroll >= shrinkHeader)
+              {
+                  $('.nav-row, .top').addClass('shrink');
+              }
+              else
+              {
+                  $('.nav-row,.top').removeClass('shrink');
+              }
+           });
+           function getCurrentScroll()
+           {
+               return window.pageYOffset;
+           }
+        });
+    </script>
 <body>
   <div class="top">
     <div class="logo">
