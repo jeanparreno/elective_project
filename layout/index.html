@@ -3,6 +3,41 @@
 	<title>My Site</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
+	                    <!--===========================FreiChat=======START=========================-->
+<!--	For uninstalling ME , first remove/comment all FreiChat related code i.e below code
+	 Then remove FreiChat tables frei_session & frei_chat if necessary
+         The best/recommended way is using the module for installation                         -->
+
+<?php
+$ses=null;
+
+if(!function_exists("freichatx_get_hash")){
+function freichatx_get_hash($ses){
+
+       if(is_file("C:/wamp/www/elective_project/FreiChat.V.9.6/freichat/hardcode.php")){
+
+               require "C:/wamp/www/elective_project/FreiChat.V.9.6/freichat/hardcode.php";
+
+               $temp_id =  $ses . $uid;
+
+               return md5($temp_id);
+
+       }
+       else
+       {
+               echo "<script>alert('module freichatx says: hardcode.php file not
+found!');</script>";
+       }
+
+       return 0;
+}
+}
+?>
+<script type="text/javascript" language="javascipt" src="http://localhost/elective_project/FreiChat.V.9.6/freichat/client/main.php?id=<?php echo $ses;?>&xhash=<?php echo freichatx_get_hash($ses); ?>"></script>
+	<link rel="stylesheet" href="http://localhost/elective_project/FreiChat.V.9.6/freichat/client/jquery/freichat_themes/freichatcss.php" type="text/css">
+<!--===========================FreiChatX=======END=========================-->                
+
+
 </head>
 <body>
 	<div class="container">

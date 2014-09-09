@@ -276,10 +276,10 @@ body {
   font-size: 1.4em;
   text-align: center;
   position: absolute;
-  top: 16px;
+  top: 31px;
   right: -12px;
   /*background-color: #999999;*/
-  z-index: 100;
+  z-index: 50;
   /*
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
@@ -480,7 +480,7 @@ body {
   width: 100%;
   border-radius: 0px 0px 5px 5px;
   position: fixed;
-  z-index: 40;
+  z-index: 100;
 }
 
 .logo img{
@@ -526,3 +526,5 @@ body {
     .search-query:focus + button {
         z-index: 3;   
     }
+
+
